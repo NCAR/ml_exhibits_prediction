@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tornado</title>
+    <link rel="stylesheet" href="../../script/jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.css">
+    <link rel="stylesheet" href="../../style/global.css" />
+	<script src="../../script/jquery-1.7.2.min.js"></script>
+	<script src="../../script/jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="tornado-video" class="page">
+	<div data-role="content">
+        	<div class="content-secondary ">
+        	<ul data-role="listview" data-inset="true" data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb">
+            <li class="ui-li ui-li-divider ui-bar-b" data-role="list-divider" role="heading">Videos</li>
+               <li data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb">
+               <a href="../katrina/katrina.html" data-ajax="false"><img src="../../images/katrina-75x75.jpg" alt="CSS" />
+               <h3>
+                   "HURRICANE KATRINA" VISUALIZATION from DYNAMIC EARTH
+               </h3></a>
+               </li>
+               <li data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb" data-theme="b">
+               <a href="#" data-ajax="false"><img src="../../images/tornado-75x75.png" alt="CSS" />
+               <h3>
+                  DEVELOPMENT of a F3 TORNADO
+               </h3></a>
+               </li>
+    
+               </ul>
+        	
+        </div>
+    	<div class="content-primary">
+        <div id="container">
+        	<div id="video_container">
+		    <video width="1024px" controls preload="auto">
+			<source src="tornado.mp4" type="video/mp4" />
+            <source src="tornado.ogv" type="video/ogg" />
+			</video>
+            <div id="videoControls">
+			<a id="play" title="Play" href="#"> &#x25BA; </a>
+			
+			<div id="progress"> 
+				<div id="progress_box"> 
+						<span id="play_progress"></span>
+				</div> 
+			</div>
+			
+			<a id="fullScreen" title="FullScreen Toggle" href="#">  <img id="fullScreenImage" src="../../images/windows_fullscreen_128x128.png" width="62" height="62" style="margin-top: -9px"/> </a>
+		</div><br/>
+		<p style="font-size:20px;">In a typical year, 1,200 tornadoes cause 70 fatalities and 1,500 injuries nationwide. Most of the damage, deaths, and injury are due to a very small percentage of these tornadoes, the so-called “supertwisters” whose winds of more than 200 miles per hour put them at the extreme end of the Fujita Scale of Tornado Intensity (the so-called F4 and F5 tornadoes). On average, there are 12 or 13 of these tornadoes in the United States each year.</p>
+
+<p style="font-size:20px;">Ideally, forecasters would be able to provide enough warning that people could protect themselves from these killer storms. While they have successfully identified atmospheric conditions that are favorable for supercell formation, accurately predicting which storms will produce tornadoes and at what time is a feat that continues to challenge forecasters. Researchers from the University of Illinois at Urbana-Champaign collaborated with visualization experts at NCSA in an effort to shed light on how the most violent tornadoes form and to create animations that reveal the inner behavior of tornado producing storms.</p>
+            </div>
+            </div>
+        </div>
+	</div>
+    <div data-role="footer" data-theme="c" data-theme="c" data-fullscreen="true" data-position="fixed" data-tap-toggle="false">
+    <a href="../videos.html" data-role="button" data-iconshadow="false" data-icon="arrow-l" data-wrapperels="span" data-theme="c" class="ui-btn-left closeButton"data-transition="slidedown" data-ajax="false"><h2>videos</h2></a>
+    <h1>DEVELOPMENT of a F3 TORNADO</h1>
+	<a href="../../index.html" data-role="button" data-iconshadow="false" data-icon="myapp-home" data-wrapperels="span" data-transition="slidedown" data-theme="c" class="ui-btn-right closeButton" data-ajax="false"><h2>home</h2></a>
+	</div>
+</div>
+<script type="text/javascript" src="../../script/videoPlayer.js"></script>
+<script>
+$(document).ready(function(e) {
+    $('#clouds').animate({"top": "-=1090px"}, "fast");
+});
+$(function(){
+      $('#home').click(function(ev){
+		  ev.preventDefault();
+		  var $self=$(this);
+		  $('#clouds').animate({"top": "+=1090px"}, "fast", function(){
+			  document.location = $self.attr('href');
+		  });
+		  });
+});
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+
+    $(document).ready(function(e) {
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 
+              '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+}); 
+
+    $('[data-role=page]').live('pageshow', function (event, ui) {
+        try {
+            _gaq.push(['_setAccount', 'UA-37974683-3']);
+
+            if ($.mobile.activePage.attr("data-url")) {
+                _gaq.push(['_trackPageview', $.mobile.activePage.attr("data-url")]);
+            } else {
+                _gaq.push(['_trackPageview']);
+            }
+        } catch(err) {}
+
+    });
+</script>
+</body>
+</html>
