@@ -26,13 +26,9 @@ a{
   margin-top: 7px;
   }
   
- .ui-icon-myapp-home{
+ .ui-icon-myapp-home:after{
 	 background:url(../images/home.png) no-repeat transparent;
-	 width: 32px;
-	 height:32px;
-    margin-top: -9px !important;
-    position: absolute !important;
-    top: 30% !important;
+	background-size: 18px 18px;
 	}
 
 .page{

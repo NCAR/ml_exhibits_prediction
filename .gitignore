@@ -5,6 +5,5 @@ videos/*/*.mov
 videos/*.mp4
 videos/*.mov
 videos/*.ogv
-script/jquery.mobile-1.1.1/*
-script/jquery-1.7.2.min.js
+script/jquery/*
 

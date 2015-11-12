@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Prediction</title>
-    <link rel="stylesheet" href="script/jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.css">
+    <link rel="stylesheet" href="script/jquery/jquery.mobile/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="style/global.css" />
-	<script src="script/jquery-1.7.2.min.js"></script>
-	<script src="script/jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.js"></script>
 </head> 
 <body> 
 <div data-role="page" id="prediction-home" class="page">
@@ -44,6 +42,9 @@
 
 	</div>
 </div>
+    
+<script src="script/jquery/jquery-1.11.3.min.js"></script>
+<script src="script/jquery/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
 var _gaq = _gaq || [];
 
@@ -56,7 +57,7 @@ var _gaq = _gaq || [];
         })();
 }); 
 
-    $('[data-role=page]').live('pageshow', function (event, ui) {
+    $('[data-role=page]').on('pageshow', function (event, ui) {
         try {
             _gaq.push(['_setAccount', 'UA-37974683-3']);
 

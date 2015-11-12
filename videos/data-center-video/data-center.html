@@ -3,33 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>data center</title>
-    <link rel="stylesheet" href="../../script/jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.css">
+    <link rel="stylesheet" href="../../script/jquery/jquery.mobile/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="../../style/global.css" />
-	<script src="../../script/jquery-1.7.2.min.js"></script>
-	<script src="../../script/jquery.mobile-1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script src="../../script/jquery/jquery-1.11.3.min.js"></script>
+	<script src="../../script/jquery/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
 </head> 
 <body> 
 
 <div data-role="page" id="clouds" class="page">
 	<div data-role="content">
         	<div class="content-secondary ">
-        	<ul data-role="listview" data-inset="true" data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb">
-            <li class="ui-li ui-li-divider ui-bar-b" data-role="list-divider" role="heading">Videos</li>
-               <li data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb">
+        	<ul data-role="listview" data-inset="true" >
+            <li data-role="list-divider" role="heading">Videos</li>
+               <li>
                <a href="../katrina/katrina.html" data-ajax="false"><img src="../../images/katrina-75x75.jpg" alt="CSS" />
                <h3>
-                   "HURRICANE KATRINA" VISUALIZATION from DYNAMIC EARTH
+                   "HURRICANE KATRINA" VISUALIZATION
                </h3></a>
                </li>
-               <li data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb">
+               <li>
                <a href="../tornado/tornado.html" data-ajax="false"><img src="../../images/tornado-75x75.png" alt="CSS" />
                <h3>
                   DEVELOPMENT of a F3 TORNADO
                </h3></a>
                </li>
-               <li data-icon="arrow-r" data-iconpos="right" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb" data-theme="b">
-               <a href="#" data-ajax="false"><img src="../../images/data-center-75x75.png" alt="CSS" />
-               <h3>Data Center Video</h3></a>
+    <li>
+               <a href="#" data-ajax="false"><img src="../../images/tornado-75x75.png" alt="CSS" />
+               <h3>
+                  SUPERCOMPUTERS
+               </h3></a>
                </li>
                </ul>
         	
@@ -58,10 +60,10 @@
             </div>
         </div>
 	</div>
-    <div data-role="footer" data-theme="c" data-theme="c" data-fullscreen="true" data-position="fixed" data-tap-toggle="false">
-    <a href="../videos.html" data-role="button" data-iconshadow="false" data-icon="arrow-l" data-wrapperels="span" data-theme="c" class="ui-btn-left closeButton"data-transition="slidedown" data-ajax="false" id="home"><h2>videos</h2></a>
+    <div data-role="footer" data-fullscreen="true" data-position="fixed" data-tap-toggle="false">
+    <a href="../videos.html" data-role="button" data-iconshadow="false" data-icon="arrow-l" data-wrapperels="span" class="ui-btn-left closeButton"data-transition="slidedown" data-ajax="false" id="home"><h2>videos</h2></a>
     <h1>Data Center Video</h1>
-	<a href="../../index.html" data-role="button" data-iconshadow="false" data-icon="myapp-home" data-wrapperels="span" data-transition="slidedown" data-theme="c" class="ui-btn-right closeButton" data-ajax="false" id="home"><h2>home</h2></a>
+	<a href="../../index.html" data-role="button" data-iconshadow="false" data-icon="myapp-home" data-wrapperels="span" data-transition="slidedown" class="ui-btn-right ui-btn-myapp-home" data-ajax="false" id="home"><h2>home</h2></a>
 	</div>
 </div>
 	<script type="text/javascript" src="../../script/videoPlayer.js"></script>
@@ -70,7 +72,7 @@ $(document).ready(function(e) {
     $('#clouds').animate({"top": "-=1090px"}, "fast");
 });
 $(function(){
-      $('#home').click(function(ev){
+      $('#home').on('click',function(ev){
 		  ev.preventDefault();
 		  var $self=$(this);
 		  $('#clouds').animate({"top": "+=1090px"}, "fast", function(){
