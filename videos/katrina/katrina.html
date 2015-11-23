@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Katrina</title>
-    <link rel="stylesheet" href="../../script/jquery/jquery.mobile/jquery.mobile-1.4.5.min.css">
+    
+        <link rel="stylesheet" href="../../script/jquery/jquery.mobile/themes/mlexhibits.min.css">
+        <link rel="stylesheet" href="../../script/jquery/jquery.mobile/themes/jquery.mobile.icons.min.css">
+	    <link rel="stylesheet" href="../../script/jquery/jquery.mobile/jquery.mobile.structure-1.4.5.min.css" />
     <link rel="stylesheet" href="../../style/global.css" />
 	<script src="../../script/jquery/jquery-1.11.3.min.js"></script>
 	<script src="../../script/jquery/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
@@ -13,15 +16,15 @@
 	<div data-role="content">
         	<div class="content-secondary ">
         	<ul data-role="listview" data-inset="true" >
-            <li data-role="list-divider" role="heading" data-theme="b">Videos</li>
-               <li data-theme="b">
-               <a href="#" data-ajax="false"><img src="../../images/katrina-75x75.jpg" alt="CSS" />
+            <li data-role="list-divider" role="heading" data-theme="e">Videos</li>
+               <li data-theme="e">
+               <a href="#" data-ajax="false" draggable="false" onmousedown="return false"><img src="../../images/katrina-75x75.jpg" alt="CSS" />
                <h3>
                    "HURRICANE KATRINA" VISUALIZATION
                </h3></a>
                </li>
                <li>
-               <a href="../tornado/tornado.html" data-ajax="false"><img src="../../images/tornado-75x75.png" alt="CSS" />
+               <a href="../tornado/tornado.html" data-ajax="false" draggable="false" onmousedown="return false"><img src="../../images/tornado-75x75.png" alt="CSS" />
                <h3>
                   DEVELOPMENT of a F3 TORNADO
                </h3></a>
@@ -39,7 +42,7 @@
             <source src="katrina.ogv" type="video/ogg" />
 			</video>
             <div id="videoControls">
-			<a id="play" title="Play" href="#"> &#x25BA; </a>
+			<a id="play" title="Play" href="#" draggable="false" onmousedown="return false"> &#x25BA; </a>
 			
 			<div id="progress"> 
 				<div id="progress_box"> 
@@ -47,7 +50,7 @@
 				</div> 
 			</div>
 			
-			<a id="fullScreen" title="FullScreen Toggle" href="#">  <img id="fullScreenImage" src="../../images/windows_fullscreen_128x128.png" width="62" height="62" style="margin-top: -9px"/> </a>
+			<a id="fullScreen" title="FullScreen Toggle" href="#" draggable="false" onmousedown="return false">  <img id="fullScreenImage" src="../../images/windows_fullscreen_128x128.png" width="62" height="62" style="margin-top: -9px"/> </a>
 		</div><br/>
 		<p style="font-size:20px;">A hurricane research team at the Earth System Laboratory, led by Wei Wang, computed the evolution of the storm using a complex numerical weather prediction model. Running this mathematical model on the Bluefire supercomputer at the National Center for Atmospheric Research yielded terabytes of data, which AVL then transformed into a striking animation of the 36-hour period when the storm is gaining energy over the warm ocean. Volume-rendered clouds show abundant moisture. Trajectories follow moist air rising into intense "hot tower" thunderstorms and trace strong winds around the eye wall; rapidly rising air is yellow, while sinking air is blue. The sun, moon, and stars show the passing of time.</p>
             </div>
@@ -55,9 +58,9 @@
         </div>
 	</div>
     <div data-role="footer" data-fullscreen="true" data-position="fixed" data-tap-toggle="false">
-    <a href="../videos.html" data-role="button" data-iconshadow="false" data-icon="arrow-l" data-wrapperels="span" class="ui-btn-left closeButton" data-transition="slidedown" data-ajax="false"><h2>videos</h2></a>
+    <a href="../videos.html" data-role="button" data-iconshadow="false" data-icon="arrow-l" data-wrapperels="span" class="ui-btn-left closeButton" data-transition="slidedown" data-ajax="false" draggable="false" onmousedown="return false"><h2>videos</h2></a>
     <h1>"HURRICANE KATRINA" VISUALIZATION from DYNAMIC EARTH</h1>
-	<a href="../../index.html" data-role="button" data-iconshadow="false" data-icon="myapp-home" data-wrapperels="span" data-transition="slidedown" class="ui-btn-right ui-btn-myapp-home" data-ajax="false" rel="external"><h2>home</h2></a>
+	<a href="../../index.html" data-role="button" data-iconshadow="false" data-icon="myapp-home" data-wrapperels="span" data-transition="slidedown" class="ui-btn-right ui-btn-myapp-home" data-ajax="false" rel="external" draggable="false" onmousedown="return false"><h2>home</h2></a>
 	</div>
 </div>
     
