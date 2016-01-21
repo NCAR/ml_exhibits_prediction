@@ -1,16 +1,57 @@
-# ml_exhibits_prediction
+ML Exhibits Prediction
+========
+
+## Introduction
+
 Repo for the prediction screen interactives
 
-Requires
 
+## Installation
 
+use bower to install the following
 
-jquery-1.11.3
+angular
 
-jquery.mobile-1.4.5
+angular-route
 
+angular-sanitize
 
+angular-touch
 
+angular-animate
+
+angular-aria
+
+angular-messages
+
+angular-material
+
+bootstrap
+
+jquery
+
+videogular
+
+videogular-buffering
+
+videogular-controls
+
+videogular-overlay-play
+
+videogular-poster
+
+videogular-themes-default
+
+angulartics
+
+angulartics-google-analytics
 
 Images, audio, video on K drive
 Exhibits/interactives
+
+
+## Maintainers/Sponsors
+
+Current maintainers:
+
+* [Sharon Clark] (https://github.com/slclark)

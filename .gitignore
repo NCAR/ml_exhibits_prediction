@@ -1,9 +1,2 @@
-images/*
-videos/*/*.mp4
-videos/*/*.ogv
-videos/*/*.mov
-videos/*.mp4
-videos/*.mov
-videos/*.ogv
-script/jquery/*
-
+assets/*
+bower_components/*

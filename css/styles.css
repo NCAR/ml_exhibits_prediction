@@ -1,0 +1,137 @@
+/* begin general styles */
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #ccc;
+}
+.container-fluid {
+    height: 100%;
+}
+.home,
+.videos {
+    background-image: url(../assets/images/bkg/MLsnow_ts4.jpg);
+}
+/* end general styles */
+
+
+/* begin footer */
+ml-exhibits-footer-menu md-toolbar.footer {
+    background-color: #efefef;
+    color: #000;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    /* Height of the footer */
+    background: #6cf;
+    text-align: center;
+}
+.md-button.md-cornered {
+    border-radius: 20px;
+}
+.md-button .material-icons {
+    vertical-align: middle;
+}
+.md-toolbar-tools i {
+    background-color: #9A9A9A;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.md-toolbar-tools .md-button {
+    font-size: 24px;
+    padding: 5px 15px;
+}
+.md-toolbar-tools h1.toolbar-text {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+/* end footer */
+
+/* begin menu */
+.menu-item {
+    background: #454753 none repeat scroll 0 0;
+    border: 1px solid #666;
+    color: #fad5a9;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.menu-options {
+    position: absolute;
+    top: 50%;
+    transform: translate(25%, -50%);
+}
+.menu-options h1.larger {
+    height: 75px;
+}
+/* end menu */
+
+/* begin video player */
+.videogular-container {
+    margin: auto;
+    overflow: hidden;
+}
+.video-description {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+.video-menu md-card {
+    background-color: #eee;
+}
+.video-menu md-card-title-media {
+    margin-right: 15px;
+}
+.video-menu .active {
+    background-color: #4B88B6;
+}
+.video-menu .video-menu-header {
+    background-color: #396B9E;
+}
+.video-menu .active,
+.video-menu .active a,
+.video-menu .video-menu-header{
+    color: #fff;
+}
+.video-menu,
+.video-menu .video-menu-header {
+    border-top-right-radius: 20px;
+}
+/* end video player */
+
+@media (min-width: 1200px) {
+    .videogular-container {
+        width: 1170px;
+        height: 658.125px;
+    }
+    .videogular-container.audio {
+        width: 1170px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .videogular-container {
+        width: 940px;
+        height: 528.75px;
+    }
+    .videogular-container.audio {
+        width: 940px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .videogular-container {
+        width: 728px;
+        height: 409.5px;
+    }
+    .videogular-container.audio {
+        width: 728px;
+        height: 50px;
+    }
+}
