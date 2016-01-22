@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row menu-options" ng-controller="menuListCtrl">
+    <div class="row vertical-align" ng-controller="menuListCtrl">
         <div class="col-md-{{items}} item" ng-repeat="item in menu_data | filter: show">
             <a ng-href="{{item.url}}" data-transition="slideup" draggable="false" onmousedown="return false">
                 <div class="menu-item">
