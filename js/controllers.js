@@ -13,7 +13,7 @@ controller('homeCtrl', function ($rootScope, $scope, contentData) {
     $rootScope.bodylayout = 'home';
     $rootScope.menulist = 'home';
 }).
-controller('flashCtrl', function ($rootScope, $scope, $sce, $routeParams, contentData) {
+controller('flashCtrl', function ($rootScope, $scope, $sce, $timeout,$routeParams, contentData) {
     $rootScope.showFooter = true;
     $scope.backButton = false;
     $rootScope.bodylayout = 'flash';
@@ -26,15 +26,14 @@ controller('flashCtrl', function ($rootScope, $scope, $sce, $routeParams, conten
 
             $.each($scope.menu_data, function (index, value) {
                 if (value.id == flashId) {
-                    $scope.src = $sce.trustAsResourceUrl(value.sources);
+                    $timeout(function () {
+                        $scope.src = $sce.trustAsResourceUrl(value.sources);
+                    }, 1000);
                     $scope.pageTitle = value.title;
                     return false;
                 }
             });
         });
-    $scope.currentSrc = function(){
-        return $scope.src;
-    }
 }).
 controller('videosCtrl', function ($rootScope, $scope, contentData) {
     $rootScope.showFooter = true;

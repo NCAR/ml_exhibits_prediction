@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: #ccc;
+    background-color: #ccc;    
+    overflow: hidden;
 }
 
 h1,
@@ -13,31 +14,26 @@ h1,
 .md-toolbar-tools h1 {
     font-weight: bold;
 }
-.container-fluid {
-    height: 100%;
-    display: table;
-    width: 100%;
-    padding: 0;
-}
 
 .home,
 .videos {
     background-image: url(../assets/images/bkg/MLsnow_ts4.jpg);
 }
-.row {
-    margin:auto;
-}
+
 .vertical-align {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
     height: 990px; /* Or whatever */
-    width:1920px;
+    width:100%;
 }
 .vertical-align .item {
       width: 413px;  /* Or whatever */
       height: 300px; /* Or whatever */
       margin: auto;  /* Magic! */
+}
+.vertical-align .item a {
+    position: absolute;
 }
 
 
@@ -103,11 +99,8 @@ ml-exhibits-footer-menu md-toolbar.footer {
 }
 .vertical-align h1.larger {
     height: 75px;
+    padding-top: 0;
 }
-.vertical-align a{
-    display:block
-}
-
 
 /* end menu */
 
