@@ -5,7 +5,6 @@ controller('webAppCtrl', function ($rootScope) {
         $rootScope.goToPage("#/");
     }
     $rootScope.goToPage = function (page) {
-        console.log(page);
         window.location.href = page;
     }
 }).
@@ -14,7 +13,7 @@ controller('homeCtrl', function ($rootScope, $scope, contentData) {
     $rootScope.bodylayout = 'home';
     $rootScope.menulist = 'home';
 }).
-controller('flashCtrl', function ($rootScope, $scope, $routeParams, contentData) {
+controller('flashCtrl', function ($rootScope, $scope, $sce, $routeParams, contentData) {
     $rootScope.showFooter = true;
     $scope.backButton = false;
     $rootScope.bodylayout = 'flash';
@@ -27,12 +26,15 @@ controller('flashCtrl', function ($rootScope, $scope, $routeParams, contentData)
 
             $.each($scope.menu_data, function (index, value) {
                 if (value.id == flashId) {
-                    $scope.src = value.sources;
+                    $scope.src = $sce.trustAsResourceUrl(value.sources);
                     $scope.pageTitle = value.title;
+                    return false;
                 }
             });
         });
-
+    $scope.currentSrc = function(){
+        return $scope.src;
+    }
 }).
 controller('videosCtrl', function ($rootScope, $scope, contentData) {
     $rootScope.showFooter = true;
@@ -72,6 +74,7 @@ controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, conten
             $.each($scope.menu_data, function (index, value) {
                 if (value.id == $scope.videoId) {
                     $scope.pageTitle = value.title;
+                    return false;
                 }
             });
         });
