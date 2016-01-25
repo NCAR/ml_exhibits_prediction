@@ -20,22 +20,28 @@ h1,
     background-image: url(../assets/images/bkg/MLsnow_ts4.jpg);
 }
 
+.vertical-align {
+    height:990px;
+    width:100%;
+}
 .vertical-align .row {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
-    height: 990px; /* Or whatever */
+    margin:0;
     width:100%;
 }
+.vertical-align .row.row_2{
+    height:495px;
+}
+.vertical-align .row.row_1{
+    height:990px;
+}
 .vertical-align .item {
-      width: 413px;  /* Or whatever */
-      height: 300px; /* Or whatever */
-      margin: auto;  /* Magic! */
+    width:507px;
+    height:390px;
+    margin: auto;  /* Magic! */
 }
-.vertical-align .item a {
-    position: absolute;
-}
-
 
 /* end general styles */
 

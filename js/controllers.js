@@ -67,6 +67,7 @@ controller('menuListCtrl', function ($rootScope, $scope, $route,contentData) {
              }
 
          });
+        $scope.row_height_style = "row_"+(row_counter+1);
      });
 }).
 controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, contentData) {
