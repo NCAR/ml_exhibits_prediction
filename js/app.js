@@ -15,8 +15,9 @@ config(["$routeProvider", function($routeProvider) {
   $routeProvider.
 	when("/", 
          {
-            templateUrl: "templates/homepage.html", 
-            controller: "homeCtrl"
+            templateUrl: "templates/menu_grid.html", 
+            controller: "homeCtrl",
+            cols: 3
         }
     ).
    when("/flash/:flashId", 
@@ -27,8 +28,9 @@ config(["$routeProvider", function($routeProvider) {
     ).
    when("/videos", 
          {
-            templateUrl: "templates/homepage.html", 
-            controller: "videosCtrl"
+            templateUrl: "templates/menu_grid.html", 
+            controller: "videosCtrl",
+            cols: 2
         }
     ).
     when("/videos/:videoId", 

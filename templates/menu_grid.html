@@ -1,6 +1,6 @@
-<div class="container-fluid">
-    <div class="row vertical-align" ng-controller="menuListCtrl">
-        <div class="col-md-{{items}} item" ng-repeat="item in menu_data | filter: show" ng-click="goToPage(item.url)">
+<div class="container-fluid" ng-controller="menuListCtrl" >
+    <div class="row vertical-align" ng-repeat="row in menu_data">
+        <div class="col-md-{{cols}} item" ng-repeat="item in row" ng-click="goToPage(item.url)">
             <div class="menu-item" width="{{item.placeholder.width}}px" height="{{item.placeholder.height}}px">
                 <h1 ng-class="header_class">{{item.title}}</h1>
                 <video loop autoplay poster="{{item.placeholder.image}}" width="{{item.placeholder.width}}px" height="{{item.placeholder.height}}px">

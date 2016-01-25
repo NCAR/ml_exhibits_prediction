@@ -42,24 +42,32 @@ controller('videosCtrl', function ($rootScope, $scope, contentData) {
     $scope.pageTitle = "Videos";
     $scope.header_class = "larger";
 }).
-controller('menuListCtrl', function ($rootScope, $scope, contentData) {
+controller('menuListCtrl', function ($rootScope, $scope, $route,contentData) {
+    $scope.cols = $route.current.$$route.cols;
+    
     contentData.getUrl('data/menu_main.json')
-        .success(function (list) {
-            $scope.menu_data = list[$rootScope.menulist];
-            var total = 0;
-            $.each($scope.menu_data, function (index, value) {
-                if (value.active == true) {
-                    total++;
-                }
-            });
+     .success(function (list) {
+         var data = list[$rootScope.menulist];
+         $scope.menu_data = Array();
+         $scope.menu_data[0] = Array();
 
-            $scope.items = 12 / total;
-        });
+         var col_counter = 0;
+         var row_counter = 0;
+         $.each(data, function (index, value) {
 
-    $scope.show = function (item) {
-        return (item.active === true);
-    };
+             if (value.active == true) {
+                 if (col_counter >= $scope.cols) {
+                     col_counter = 0;
+                     row_counter++;
+                     $scope.menu_data[row_counter] = Array();
 
+                 }
+                 $scope.menu_data[row_counter].push(value);
+                 col_counter++;
+             }
+
+         });
+     });
 }).
 controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, contentData) {
     $rootScope.showFooter = true;
