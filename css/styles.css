@@ -20,7 +20,7 @@ h1,
     background-image: url(../assets/images/bkg/MLsnow_ts4.jpg);
 }
 
-.vertical-align {
+.vertical-align .row {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
