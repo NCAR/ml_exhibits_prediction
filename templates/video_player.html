@@ -11,7 +11,7 @@
                     <md-card ng-class="{'active':video.id==videoId}" ng-click="goToPage(video.url)">
                         <md-card-title>
                             <md-card-title-media>
-                                <img ng-src="{{video.placeholder.thumb}}" class="md-card-image" alt="Washed Out">
+                                <img ng-src="{{video.placeholder.thumb}}" class="md-card-image" alt="{{video.title}}">
                             </md-card-title-media>
                             <md-card-title-text>
                                 <span class="md-headline">{{video.title}}</span>
