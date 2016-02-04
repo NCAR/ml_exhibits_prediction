@@ -19,7 +19,21 @@ h1,
 .videos {
     background-image: url(../assets/images/bkg/MLsnow_ts4.jpg);
 }
-
+.page-content {
+    font-size: 24px;
+    margin-left:25px;
+    text-shadow:none;
+    padding-top: 20px;
+}
+.page-content p {
+    margin-bottom:20px;
+}
+img.right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom:20px;
+    margin-right: 25px;
+}
 .vertical-align {
     height:990px;
     width:100%;
@@ -125,6 +139,8 @@ ml-exhibits-footer-menu md-toolbar.footer {
     margin-right: auto;
     padding-top: 20px;
     font-size:20px;
+    color:#fff;
+    
 }
 
 .video-menu md-card {
@@ -134,7 +150,9 @@ ml-exhibits-footer-menu md-toolbar.footer {
 .video-menu md-card-title-media {
     margin-right: 15px;
 }
-
+.video-menu .md-headline {
+    color: #000;
+}
 .video-menu .active {
     background-color: #4B88B6;
 }
@@ -145,6 +163,7 @@ ml-exhibits-footer-menu md-toolbar.footer {
 
 .video-menu .active,
 .video-menu .active a,
+.video-menu .active .md-headline,
 .video-menu .video-menu-header {
     color: #fff;
 }
@@ -154,6 +173,9 @@ ml-exhibits-footer-menu md-toolbar.footer {
     border-top-right-radius: 20px;
 }
 
+.video-menu-header .md-headline{
+    color:#fff;
+}
 
 /* end video player */
 
