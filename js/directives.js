@@ -1,5 +1,5 @@
 angular.module('edu.ucar.scied.prediction.directives', [])
-    .directive("mlExhibitsFooterMenu", function (redirect) {
+    .directive("mlExhibitsFooterMenu", function (Redirect) {
         return {
             restrict: 'E',
             templateUrl: 'templates/footer.html',
@@ -11,10 +11,10 @@ angular.module('edu.ucar.scied.prediction.directives', [])
             }, 
             controller: function($scope, $rootScope){
                 $scope.returnToHome = function () {
-                    redirect.returnHome();
+                    Redirect.returnHome();
                 }
                 $scope.goBack = function(){
-                    redirect.goToPage($scope.backPage);
+                    Redirect.goToPage($scope.backPage);
                 }
             }
         };

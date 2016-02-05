@@ -1,19 +1,19 @@
 angular.module('edu.ucar.scied.prediction.services', []).
-factory('contentData', function contentDataFactory($http) {
+factory('ContentData', function ContentDataFactory($http) {
     return getUrl = function (url) {
         return $http.get(url);
     };
 }).
-factory('redirect', function redirectFactory() {
-    var redirect = {};
+factory('Redirect', function RedirectFactory() {
+    var Redirect = {};
 
-    redirect.goToPage = function (page) {
+    Redirect.goToPage = function (page) {
         window.location.href = page;
     };
-    redirect.returnHome = function () {
-        redirect.goToPage("#/");
+    Redirect.returnHome = function () {
+        Redirect.goToPage("#/");
     };
 
-    return redirect;
+    return Redirect;
 
 });

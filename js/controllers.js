@@ -1,26 +1,26 @@
 angular.module('edu.ucar.scied.prediction.controllers', []).
-controller('webAppCtrl', function ($rootScope, $scope, redirect) {
+controller('webAppCtrl', function ($rootScope, $scope, Redirect) {
     $rootScope.showFooter = false;
     $scope.returnToHome = function () {
-        redirect.goToPage("#/");
+        Redirect.goToPage("#/");
     }
     $scope.goToPage = function (page) {
-        redirect.goToPage(page);
+        Redirect.goToPage(page);
     }
 }).
-controller('homeCtrl', function ($rootScope, $scope, contentData) {
+controller('homeCtrl', function ($rootScope, $scope) {
     $rootScope.showFooter = false;
     $rootScope.bodylayout = 'home';
     $rootScope.menulist = 'home';
 }).
-controller('flashCtrl', function ($rootScope, $scope, $sce, $timeout,$routeParams, contentData) {
+controller('flashCtrl', function ($rootScope, $scope, $sce, $timeout,$routeParams, ContentData) {
     $rootScope.showFooter = true;
     $scope.backButton = false;
     $rootScope.bodylayout = 'flash';
 
     var flashId = $routeParams.flashId;
 
-    contentData('data/menu_main.json')
+    ContentData('data/menu_main.json')
         .success(function (list) {
             $scope.menu_data = list["flash"];
 
@@ -35,17 +35,17 @@ controller('flashCtrl', function ($rootScope, $scope, $sce, $timeout,$routeParam
             });
         });
 }).
-controller('videosCtrl', function ($rootScope, $scope, contentData) {
+controller('videosCtrl', function ($rootScope, $scope, ContentData) {
     $rootScope.showFooter = true;
     $rootScope.bodylayout = 'videos';
     $rootScope.menulist = 'videos';
     $scope.pageTitle = "Videos";
     $scope.header_class = "larger";
 }).
-controller('menuListCtrl', function ($rootScope, $scope, $route,contentData) {
+controller('menuListCtrl', function ($rootScope, $scope, $route,ContentData) {
     $scope.cols = $route.current.$$route.cols;
     
-    contentData('data/menu_main.json')
+    ContentData('data/menu_main.json')
      .success(function (list) {
          var data = list[$rootScope.menulist];
          $scope.menu_data = Array();
@@ -70,12 +70,12 @@ controller('menuListCtrl', function ($rootScope, $scope, $route,contentData) {
         $scope.row_height_style = "row_"+(row_counter+1);
      });
 }).
-controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, contentData) {
+controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, ContentData) {
     $rootScope.showFooter = true;
     $rootScope.bodylayout = 'video-player';
     $scope.videoId = $routeParams.videoId;
 
-    contentData('data/menu_main.json')
+    ContentData('data/menu_main.json')
         .success(function (list) {
             $scope.menu_data = list["videos"];
 
