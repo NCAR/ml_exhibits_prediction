@@ -20,7 +20,7 @@ controller('flashCtrl', function ($rootScope, $scope, $sce, $timeout,$routeParam
 
     var flashId = $routeParams.flashId;
 
-    contentData.getUrl('data/menu_main.json')
+    contentData('data/menu_main.json')
         .success(function (list) {
             $scope.menu_data = list["flash"];
 
@@ -45,7 +45,7 @@ controller('videosCtrl', function ($rootScope, $scope, contentData) {
 controller('menuListCtrl', function ($rootScope, $scope, $route,contentData) {
     $scope.cols = $route.current.$$route.cols;
     
-    contentData.getUrl('data/menu_main.json')
+    contentData('data/menu_main.json')
      .success(function (list) {
          var data = list[$rootScope.menulist];
          $scope.menu_data = Array();
@@ -75,7 +75,7 @@ controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, conten
     $rootScope.bodylayout = 'video-player';
     $scope.videoId = $routeParams.videoId;
 
-    contentData.getUrl('data/menu_main.json')
+    contentData('data/menu_main.json')
         .success(function (list) {
             $scope.menu_data = list["videos"];
 
