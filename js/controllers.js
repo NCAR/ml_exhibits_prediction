@@ -1,11 +1,11 @@
 angular.module('edu.ucar.scied.prediction.controllers', []).
-controller('webAppCtrl', function ($rootScope) {
+controller('webAppCtrl', function ($rootScope, $scope, redirect) {
     $rootScope.showFooter = false;
-    $rootScope.returnToHome = function () {
-        $rootScope.goToPage("#/");
+    $scope.returnToHome = function () {
+        redirect.goToPage("#/");
     }
-    $rootScope.goToPage = function (page) {
-        window.location.href = page;
+    $scope.goToPage = function (page) {
+        redirect.goToPage(page);
     }
 }).
 controller('homeCtrl', function ($rootScope, $scope, contentData) {
@@ -97,8 +97,5 @@ controller('videoPlayerCtrl', function ($rootScope, $scope, $routeParams, conten
     $scope.backButton = true;
     $scope.backButtonText = "Videos";
     $scope.backPage = "#/videos";
-
-}).
-controller('footerCtrl', function ($scope) {
 
 });

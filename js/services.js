@@ -7,4 +7,17 @@ factory('contentData', ['$http',function($http) {
          };
 
         return contentData;
+}]).
+factory('redirect', [function(){
+   var redirect = {};
+    
+    redirect.goToPage = function(page){
+       window.location.href = page;
+    };
+    redirect.returnHome = function(){
+       redirect.goToPage("#/");
+    };
+    
+    return redirect;
+    
 }]);
