@@ -1,4 +1,4 @@
-angular.module('edu.ucar.scied.prediction.directives', [])
+angular.module('edu.ucar.scied.directives', [])
     .directive("mlExhibitsFooterMenu", function (Redirect) {
         return {
             restrict: 'E',
@@ -8,20 +8,14 @@ angular.module('edu.ucar.scied.prediction.directives', [])
                 backButtonText: "=",
                 backButton: "=",
                 backPage: "="
-            }, 
-            controller: function($scope, $rootScope){
+            },
+            controller: function ($scope, $rootScope) {
                 $scope.returnToHome = function () {
                     Redirect.returnHome();
                 }
-                $scope.goBack = function(){
+                $scope.goBack = function () {
                     Redirect.goToPage($scope.backPage);
                 }
             }
-        };
-    })
-    .directive("mlExhibitsFlashObject", function () {
-        return {
-            restrict: 'E',
-            templateUrl: 'templates/flash_object.html',
         };
     });

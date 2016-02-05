@@ -1,0 +1,19 @@
+{
+    "flash": [
+        {
+
+            "id": "hurricane",
+            "active": true,
+            "title": "Forecast a Hurricane",
+            "sources": "assets/flash/hurricane.swf"
+        },
+        {
+
+            "id": "snow",
+            "active": true,
+            "title": "Create a Snowstorm",
+            "sources": "assets/flash/snow.swf"
+         }
+
+    ]
+}

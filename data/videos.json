@@ -1,48 +1,4 @@
 {
-    "home": [
-        {
-            "id": 1,
-            "active": true,
-            "title": "Forecast a HURRICANE",
-            "description": "Select an upper-level high and low to see where a hurricane will go",
-            "url": "#/flash/hurricane",
-            "placeholder": {
-                "image": "assets/images/menu/posterframes/forecast-a-hurricane.jpg",
-                "mp4": "assets/videos/menu/forecast-a-hurricane.mp4",
-                "ogg": "assets/videos/menu/forecast-a-hurricane.ogv",
-                "width": 475,
-                "height": 243
-            }
-            },
-        {
-            "id": 2,
-            "active": true,
-            "title": "Create a SNOWSTORM",
-            "description": "Drag storm systems to create an upslope storm",
-            "url": "#/flash/snow",
-            "placeholder": {
-                "image": "assets/images/menu/posterframes/create-a-snowstorm.jpg",
-                "mp4": "assets/videos/menu/create-a-snowstorm.mp4",
-                "ogg": "assets/videos/menu/create-a-snowstorm.ogv",
-                "width": 475,
-                "height": 243
-            }
-            },
-        {
-            "id": 3,
-            "active": true,
-            "title": "Videos",
-            "description": "Watch videos about modeling and computer systems in the atmospheric sciences",
-            "url": "#/videos",
-            "placeholder": {
-                "image": "assets/images/menu/posterframes/katrina.jpg",
-                "mp4": "assets/videos/menu/katrina.mp4",
-                "ogg": "assets/videos/menu/katrina.ogv",
-                "width": 475,
-                "height": 243
-            }
-            }
-        ],
     "videos": [
         {
 
@@ -58,6 +14,31 @@
                 "ogg": "assets/videos/menu/katrina.ogv",
                 "width": 475,
                 "height": 243
+            },
+            "sources": [
+                {
+                    "src": "assets/videos/katrina.mp4",
+                    "type": "video/mp4"
+                    }, {
+                    "src": "assets/videos/katrina.ogv",
+                    "type": "video/ogv"
+                    }
+				],
+            "theme": "bower_components/videogular-themes-default/videogular.css",
+            "plugins": {
+                "poster": "assets/images/posterframes/katrina.jpg",
+                "analytics": {
+                    "category": "Video",
+                    "label": "Data Center",
+                    "events": {
+                        "ready": true,
+                        "play": true,
+                        "pause": true,
+                        "stop": true,
+                        "complete": true,
+                        "progress": 10
+                    }
+                }
             }
         },
         {
@@ -74,6 +55,31 @@
                 "ogg": "assets/videos/menu/tornado.ogv",
                 "width": 475,
                 "height": 243
+            },
+            "sources": [
+                {
+                    "src": "assets/videos/tornado.mp4",
+                    "type": "video/mp4"
+                    }, {
+                    "src": "assets/videos/tornado.ogv",
+                    "type": "video/ogv"
+                    }
+				],
+            "theme": "bower_components/videogular-themes-default/videogular.css",
+            "plugins": {
+                "poster": "assets/images/posterframes/tornado.jpg",
+                "analytics": {
+                    "category": "Video",
+                    "label": "Data Center",
+                    "events": {
+                        "ready": true,
+                        "play": true,
+                        "pause": true,
+                        "stop": true,
+                        "complete": true,
+                        "progress": 10
+                    }
+                }
             }
         },
         {
@@ -90,6 +96,31 @@
                 "ogg": "assets/videos/menu/data-center.ogv",
                 "width": 475,
                 "height": 243
+            },
+            "sources": [
+                {
+                    "src": "assets/videos/data-center.mp4",
+                    "type": "video/mp4"
+                    }, {
+                    "src": "assets/videos/data-center.ogv",
+                    "type": "video/ogv"
+                    }
+				],
+            "theme": "bower_components/videogular-themes-default/videogular.css",
+            "plugins": {
+                "poster": "assets/images/posterframes/data-center.jpg",
+                "analytics": {
+                    "category": "Video",
+                    "label": "Data Center",
+                    "events": {
+                        "ready": true,
+                        "play": true,
+                        "pause": true,
+                        "stop": true,
+                        "complete": true,
+                        "progress": 10
+                    }
+                }
             }
             }
         ]
