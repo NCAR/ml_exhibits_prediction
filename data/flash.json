@@ -5,14 +5,14 @@
             "id": "hurricane",
             "active": true,
             "title": "Forecast a Hurricane",
-            "sources": "assets/flash/hurricane.swf"
+            "sources": "/core/assets/flash/hurricane.swf"
         },
         {
 
             "id": "snow",
             "active": true,
             "title": "Create a Snowstorm",
-            "sources": "assets/flash/snow.swf"
+            "sources": "/core/assets/flash/snow.swf"
          }
 
     ]
