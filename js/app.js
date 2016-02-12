@@ -2,6 +2,7 @@ angular.module("edu.ucar.scied.prediction", [
     "edu.ucar.scied.controllers", 
     "edu.ucar.scied.controllers.flash",
     "edu.ucar.scied.controllers.videos",
+    "edu.ucar.scied.controllers.prediction",
     "edu.ucar.scied.services",
     "edu.ucar.scied.directives",
     "edu.ucar.scied.directives.flash",
@@ -21,26 +22,24 @@ config(["$routeProvider", function($routeProvider) {
          {
             templateUrl: "/core/templates/menu_grid.html", 
             controller: "homeCtrl",
-            cols: 3
         }
     ).
    when("/flash/:contentId", 
          {
             templateUrl: "/core/templates/flash.html", 
-            controller: "flashCtrl"
+            controller: "localFlashCtrl"
         }
     ).
    when("/videos", 
          {
             templateUrl: "/core/templates/menu_grid.html", 
             controller: "videosCtrl",
-            cols: 2
         }
     ).
     when("/videos/:videoId", 
          {
             templateUrl: "/core/templates/video_player.html", 
-            controller: "videoPlayerCtrl"
+            controller: "playerCtrl"
         }
     ).
 	otherwise({redirectTo: '/'});

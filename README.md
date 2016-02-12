@@ -6,48 +6,8 @@ ML Exhibits Prediction
 Repo for the prediction screen interactives
 
 
-## Installation
-
-use bower to install the following
-
-angular
-
-angular-route
-
-angular-sanitize
-
-angular-touch
-
-angular-animate
-
-angular-aria
-
-angular-messages
-
-angular-material
-
-bootstrap
-
-jquery
-
-videogular
-
-videogular-buffering
-
-videogular-controls
-
-videogular-overlay-play
-
-videogular-poster
-
-videogular-themes-default
-
-angulartics
-
-angulartics-google-analytics
-
-Images, audio, video on K drive
-Exhibits/interactives
+## Requires
+Functionality from: https://github.com/NCAR/ml_exhibits_core/
 
 
 ## Maintainers/Sponsors
