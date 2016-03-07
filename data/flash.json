@@ -5,7 +5,7 @@
             "id": "hurricane",
             "active": true,
             "title": "Forecast a Hurricane",
-            "sources": "/core/assets/flash/hurricane.swf"
+            "sources": "/core/assets/flash/forecast-hurricane.swf"
         },
         {
 

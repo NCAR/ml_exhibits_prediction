@@ -21,9 +21,10 @@ controller('homeCtrl', function ($rootScope, $scope) {
     $scope.backButtonText = "Videos";
     $scope.backPage = "#/videos";
 }).
-controller('localFlashCtrl', function ($rootScope, $routeParams, $scope) {
-    $rootScope.showFooter = true;
+controller('localFlashCtrl', function ($rootScope, $routeParams, $scope,ContentData) {
+   $rootScope.showFooter = true;
     $rootScope.bodylayout = 'flash';
+    var src = '';
     if ($routeParams.menuId) {
         $scope.backButton = true;
         $scope.backButtonText = "Back";
@@ -32,4 +33,30 @@ controller('localFlashCtrl', function ($rootScope, $routeParams, $scope) {
         $scope.backButton = false;
     }
     $scope.data = 'data/flash.json';
+    ContentData($scope.data)
+        .success(function (list) {
+            $scope.menu_data = list["flash"];
+            $.each($scope.menu_data, function (index, value) {
+                if (value.id == $routeParams.contentId) {                    
+                    $scope.pageTitle = value.title;
+                }});
+    });
+    
+    switch($routeParams.contentId){
+        case "hurricane":
+            src = '/core/assets/flash/forecast-hurricane.swf';
+            break;
+        case "snow":
+            src = '/core/assets/flash/snow.swf';
+            break;
+    }
+    
+    $scope.flash = {
+        visible: true,
+        config: {
+            swfUrl: src,
+            width: 1920,
+            height: 990
+        }
+    };
 });
