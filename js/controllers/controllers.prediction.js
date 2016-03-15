@@ -10,7 +10,7 @@ controller('homeCtrl', function ($rootScope, $scope) {
     $rootScope.showFooter = true;
     $rootScope.bodylayout = 'videos';
     $rootScope.menulist = 'videos';
-    $scope.pageTitle = "Videos";
+    $scope.pagetitle = "Videos";
     $scope.header_class = "larger";
     $scope.data = 'data/menu_main.json';
 })
@@ -38,7 +38,7 @@ controller('localFlashCtrl', function ($rootScope, $routeParams, $scope,ContentD
             $scope.menu_data = list["flash"];
             $.each($scope.menu_data, function (index, value) {
                 if (value.id == $routeParams.contentId) {                    
-                    $scope.pageTitle = value.title;
+                    $scope.pagetitle = value.title;
                 }});
     });
     
