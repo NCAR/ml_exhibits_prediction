@@ -10,9 +10,10 @@ body {
 .videos {
     background-image: url(/core/assets/images/bkg/MLsnow_ts4.jpg);
 }
-.home .vertical-align .item {
-    width:507px;
-    height:390px;
-    margin-left: 100px;
+
+.vertical-align .row.row_1 {
     margin-top: 300px;
+}
+.vertical-align .row.row_1 .col-md-3.item{
+    margin-left:80px;
 }
