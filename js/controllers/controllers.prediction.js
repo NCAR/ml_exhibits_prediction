@@ -14,31 +14,31 @@
         $scope.data = 'data/menu_main.json';
     }
 
-    function videosCtrl($rootScope, $scope, ContentData) {
+    function videosCtrl($rootScope, $scope, ContentData, Footer) {
         $rootScope.showFooter = true;
         $rootScope.bodylayout = 'videos';
         $rootScope.menulist = 'videos';
-        $scope.pagetitle = "Videos";
+        Footer.setPageTitle("Videos");
         $scope.header_class = "larger";
         $scope.data = 'data/menu_main.json';
     }
 
-    function playerCtrl($rootScope, $scope) {
+    function playerCtrl($rootScope, $scope, Footer) {
         $rootScope.showFooter = true;
         $rootScope.bodylayout = 'video-player';
-        $scope.backButton = true;
-        $scope.backButtonText = "Videos";
-        $scope.backPage = "#/videos";
+        Footer.setBackButton(true);
+        Footer.setBackButtonText("Videos");
+        Footer.setBackPage("#/videos");
     }
 
-    function localFlashCtrl($rootScope, $routeParams, $scope, ContentData) {
+    function localFlashCtrl($rootScope, $routeParams, $scope, ContentData, Footer) {
         $rootScope.showFooter = true;
         $rootScope.bodylayout = 'flash';
         var src = '';
         if ($routeParams.menuId) {
-            $scope.backButton = true;
-            $scope.backButtonText = "Back";
-            $scope.backPage = '#/' + $routeParams.menuId;
+            Footer.setBackButton(true);
+            Footer.setBackButtonText("Back");
+            Footer.setBackPage('#/' + $routeParams.menuId);
         } else {
             $scope.backButton = false;
         }
@@ -62,14 +62,14 @@
         };
         ContentData($scope.data)
             .success(processData);
-    };
 
-    function processData(list) {
-        $scope.menu_data = list["flash"];
-        $.each($scope.menu_data, function (index, value) {
-            if (value.id == $routeParams.contentId) {
-                $scope.pagetitle = value.title;
-            }
-        });
-    }
+        function processData(list) {
+            $scope.menu_data = list["flash"];
+            $.each($scope.menu_data, function (index, value) {
+                if (value.id == $routeParams.contentId) {
+                    Footer.setPageTitle(value.title);
+                }
+            });
+        }
+    };
 })();
