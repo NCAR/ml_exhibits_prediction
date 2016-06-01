@@ -5,6 +5,7 @@
     "edu.ucar.scied.controllers.videos",
     "edu.ucar.scied.controllers.prediction",
     "edu.ucar.scied.services",
+    "edu.ucar.scied.services.webapp",
     "edu.ucar.scied.services.footer",
     "edu.ucar.scied.directives.footer",
     "edu.ucar.scied.filters",

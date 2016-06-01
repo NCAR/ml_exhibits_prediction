@@ -6,43 +6,44 @@
         .controller('playerCtrl', playerCtrl)
         .controller('localFlashCtrl', localFlashCtrl);
 
-    function homeCtrl($rootScope, $scope) {
-        $rootScope.showFooter = false;
-        $rootScope.bodylayout = 'home';
-        $rootScope.menulist = 'home';
-        $scope.cols = 3;
-        $scope.data = 'data/menu_main.json';
+    function homeCtrl(WebApp) {
+        WebApp.setShowFooter(false);
+        WebApp.setBodyLayout('home');
+        WebApp.setMenuList('home');
+        WebApp.setCols(3);
+        WebApp.setDataSource('data/menu_main.json');
     }
 
-    function videosCtrl($rootScope, $scope, ContentData, Footer) {
-        $rootScope.showFooter = true;
-        $rootScope.bodylayout = 'videos';
-        $rootScope.menulist = 'videos';
+    function videosCtrl(ContentData, Footer, WebApp) {
+        WebApp.setShowFooter(true);
+        WebApp.setBodyLayout('videos');
+        WebApp.setMenuList('videos');
+        WebApp.setCols(2);
+        WebApp.setHeaderClass("larger");
+        WebApp.setDataSource('data/menu_main.json');
         Footer.setPageTitle("Videos");
-        $scope.header_class = "larger";
-        $scope.data = 'data/menu_main.json';
     }
 
-    function playerCtrl($rootScope, $scope, Footer) {
-        $rootScope.showFooter = true;
-        $rootScope.bodylayout = 'video-player';
+    function playerCtrl(Footer, WebApp) {
+        WebApp.setShowFooter(true);
+        WebApp.setBodyLayout('video-player');
         Footer.setBackButton(true);
         Footer.setBackButtonText("Videos");
         Footer.setBackPage("#/videos");
     }
 
-    function localFlashCtrl($rootScope, $routeParams, $scope, ContentData, Footer) {
-        $rootScope.showFooter = true;
-        $rootScope.bodylayout = 'flash';
+    function localFlashCtrl($routeParams, $scope, ContentData, Footer, WebApp) {
+        WebApp.setShowFooter(true);
+        WebApp.setBodyLayout('flash');
         var src = '';
         if ($routeParams.menuId) {
             Footer.setBackButton(true);
             Footer.setBackButtonText("Back");
             Footer.setBackPage('#/' + $routeParams.menuId);
         } else {
-            $scope.backButton = false;
+            Footer.setBackButton(false);
         }
-        $scope.data = 'data/flash.json';
+        WebApp.setDataSource('data/flash.json');
         switch ($routeParams.contentId) {
         case "hurricane":
             src = '/core/assets/flash/forecast-hurricane.swf';
@@ -60,12 +61,12 @@
                 height: 990
             }
         };
-        ContentData($scope.data)
+        ContentData(WebApp.getDataSource())
             .success(processData);
 
         function processData(list) {
-            $scope.menu_data = list["flash"];
-            $.each($scope.menu_data, function (index, value) {
+            var menu_data = list["flash"];
+            $.each(menu_data, function (index, value) {
                 if (value.id == $routeParams.contentId) {
                     Footer.setPageTitle(value.title);
                 }
