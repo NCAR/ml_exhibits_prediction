@@ -1,11 +1,12 @@
 (function () {
     'use strict';
-    angular.module('edu.ucar.scied.controllers.prediction', [])
+    angular.module('edu.ucar.scied.prediction.controller', [])
         .controller('homeCtrl', homeCtrl)
         .controller('videosCtrl', videosCtrl)
         .controller('playerCtrl', playerCtrl)
         .controller('localFlashCtrl', localFlashCtrl);
 
+    homeCtrl.$inject = ['WebApp'];
     function homeCtrl(WebApp) {
         WebApp.setShowFooter(false);
         WebApp.setBodyLayout('home');
@@ -14,6 +15,7 @@
         WebApp.setDataSource('data/menu_main.json');
     }
 
+    videosCtrl.$inject = ['ContentData', 'Footer', 'WebApp'];
     function videosCtrl(ContentData, Footer, WebApp) {
         WebApp.setShowFooter(true);
         WebApp.setBodyLayout('videos');
@@ -24,6 +26,7 @@
         Footer.setPageTitle("Videos");
     }
 
+    playerCtrl.$inject = ['Footer', 'WebApp'];
     function playerCtrl(Footer, WebApp) {
         WebApp.setShowFooter(true);
         WebApp.setBodyLayout('video-player');
@@ -32,6 +35,7 @@
         Footer.setBackPage("#/videos");
     }
 
+    localFlashCtrl.$inject = ['$routeParams', '$scope', 'ContentData', 'Footer', 'WebApp'];
     function localFlashCtrl($routeParams, $scope, ContentData, Footer, WebApp) {
         WebApp.setShowFooter(true);
         WebApp.setBodyLayout('flash');

@@ -1,14 +1,15 @@
 (function () {
     'use strict';
     angular.module("edu.ucar.scied.prediction", [
-    "edu.ucar.scied.controllers",
-    "edu.ucar.scied.controllers.videos",
-    "edu.ucar.scied.controllers.prediction",
-    "edu.ucar.scied.services",
-    "edu.ucar.scied.services.webapp",
-    "edu.ucar.scied.services.footer",
-    "edu.ucar.scied.directives.footer",
+    "edu.ucar.scied.prediction.controller",
+    "edu.ucar.scied.webapp.controller",
+    "edu.ucar.scied.webapp.service",
+    "edu.ucar.scied.menulist.controller",
+    "edu.ucar.scied.videos.controller",
+    "edu.ucar.scied.footer.service",
+    "edu.ucar.scied.footer.directive",
     "edu.ucar.scied.filters",
+    "edu.ucar.scied.services",
     "ngRoute",
     "ngMaterial",
     "w11k.flash",
