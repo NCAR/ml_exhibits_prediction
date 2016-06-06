@@ -24,19 +24,19 @@
     config(["$routeProvider", function ($routeProvider) {
         $routeProvider.
         when("/", {
-            templateUrl: "/core/templates/menu_grid.html",
+            templateUrl: "/core/js/menulist/menu_grid.html",
             controller: "homeCtrl",
         }).
         when("/flash/:contentId", {
-            templateUrl: "/core/templates/flash.html",
+            templateUrl: "/core/js/flash/flash.html",
             controller: "localFlashCtrl"
         }).
         when("/videos", {
-            templateUrl: "/core/templates/menu_grid.html",
+            templateUrl: "/core/js/menulist/menu_grid.html",
             controller: "videosCtrl",
         }).
         when("/videos/:videoId", {
-            templateUrl: "/core/templates/video_player.html",
+            templateUrl: "/core/js/videos/video_player.html",
             controller: "playerCtrl"
         }).
         otherwise({
