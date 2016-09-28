@@ -20,6 +20,7 @@
         WebApp.setShowFooter(true);
         WebApp.setBodyLayout('videos');
         WebApp.setMenuList('videos');
+        Footer.setBackButton(false);
         WebApp.setCols(2);
         WebApp.setHeaderClass("larger");
         WebApp.setDataSource('data/menu_main.json');
