@@ -51,10 +51,10 @@
         WebApp.setDataSource('data/flash.json');
         switch ($routeParams.contentId) {
         case "hurricane":
-            src = '/core/assets/flash/forecast-hurricane.swf';
+            src = '/assets/flash/forecast-hurricane.swf';
             break;
         case "snow":
-            src = '/core/assets/flash/snow.swf';
+            src = '/assets/flash/snow.swf';
             break;
         }
 
