@@ -82,35 +82,30 @@
             }
         },
         {
-
-            "id": "supercomputers",
-            "active": false,
-            "title": "Supercomputers",
-            "description": "<p>This is a video on why we need supercomputers to help us research weather.</p>",
-            "url": "#/videos/supercomputers",
+            "id": "measurements",
+            "active": true,
+            "title": "Measurements to Modeling",
+            "description": "<p>Meteorological Instrumentation and Measurements.</p>",
+            "url": "#/videos/measurements",
             "placeholder": {
-                "image": "/assets/images/menu/posterframes/data-center.jpg",
-                "thumb": "/assets/images/menu/data-center-thumb.jpg",
-                "mp4": "/assets/videos/menu/data-center.mp4",
-                "ogg": "/assets/videos/menu/data-center.ogv",
+                "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
+                "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
+                "mp4": "/assets/videos/menu/prediction-measurements.mp4",
                 "width": 475,
                 "height": 243
             },
             "sources": [
                 {
-                    "src": "/assets/videos/data-center.mp4",
+                    "src": "/assets/videos/prediction-measurements.mp4",
                     "type": "video/mp4"
-                    }, {
-                    "src": "/assets/videos/data-center.ogv",
-                    "type": "video/ogv"
                     }
 				],
             "theme": "/core/bower_components/videogular-themes-default/videogular.css",
             "plugins": {
-                "poster": "/assets/images/posterframes/data-center.jpg",
+                "poster": "/assets/images/posterframes/prediction-measurements.jpg",
                 "analytics": {
                     "category": "Video",
-                    "label": "Data Center",
+                    "label": "Prediction Measurements",
                     "events": {
                         "ready": true,
                         "play": true,
@@ -121,6 +116,42 @@
                     }
                 }
             }
-            }
+            },
+            {
+                "id": "principles",
+                "active": true,
+                "title": "Principles of Meteorological Instrumentation and Measurements",
+                "description": "<p>Meteorological Instrumentation and Measurements.</p>",
+                "url": "#/videos/principles",
+                "placeholder": {
+                    "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
+                    "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
+                    "mp4": "/assets/videos/menu/prediction-principles.mp4",
+                    "width": 475,
+                    "height": 243
+                },
+                "sources": [
+                    {
+                        "src": "/assets/videos/prediction-principles.mp4",
+                        "type": "video/mp4"
+                        }
+    				],
+                "theme": "/core/bower_components/videogular-themes-default/videogular.css",
+                "plugins": {
+                    "poster": "/assets/images/posterframes/prediction-principles.jpg",
+                    "analytics": {
+                        "category": "Video",
+                        "label": "Prediction Principles",
+                        "events": {
+                            "ready": true,
+                            "play": true,
+                            "pause": true,
+                            "stop": true,
+                            "complete": true,
+                            "progress": 10
+                        }
+                    }
+                }
+                }
         ]
 }

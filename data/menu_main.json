@@ -78,19 +78,33 @@
         },
         {
 
-            "id": "supercomputers",
-            "active": false,
-            "title": "Supercomputers",
+            "id": "measurements",
+            "active": true,
+            "title": "Measurements to Modeling",
             "description": "<p>This is a video on why we need supercomputers to help us research weather.</p>",
-            "url": "#/videos/supercomputers",
+            "url": "#/videos/measurements",
             "placeholder": {
-                "image": "/assets/images/menu/posterframes/data-center.jpg",
-                "thumb": "/assets/images/menu/data-center-thumb.jpg",
-                "mp4": "/assets/videos/menu/data-center.mp4",
-                "ogg": "/assets/videos/menu/data-center.ogv",
+                "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
+                "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
+                "mp4": "/assets/videos/menu/prediction-measurements.mp4",
                 "width": 475,
                 "height": 243
             }
-            }
+            },
+            {
+
+                "id": "principles",
+                "active": true,
+                "title": "Principles of Meteorological Instrumentation and Measurements",
+                "description": "<p>This is a video on why we need supercomputers to help us research weather.</p>",
+                "url": "#/videos/principles",
+                "placeholder": {
+                    "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
+                    "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
+                    "mp4": "/assets/videos/prediction-principles.mp4",
+                    "width": 475,
+                    "height": 243
+                }
+                }
         ]
 }
