@@ -120,7 +120,7 @@
             {
                 "id": "principles",
                 "active": true,
-                "title": "Meteorological Instrumentation and Measurements",
+                "title": "Instrumentation and Measurements",
                 "description": "<p>Meteorological instruments and observing systems are needed because we want to understand the phenomena we are studying for several reasons. We can use observing systems for ground truth, initialization for a computer model, and to understand anything from road weather to space weather and use the information to respond to the impacts of a particular phenomenon.It is important and necessary that we understand the principles behind instrumentation and measurement because it's the basis of understanding science and of getting to the truth.</p>",
                 "url": "#/videos/principles",
                 "placeholder": {
