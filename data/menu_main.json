@@ -80,8 +80,8 @@
 
             "id": "measurements",
             "active": true,
-            "title": "Measurements to Modeling",
-            "description": "<p>This is a video on why we need supercomputers to help us research weather.</p>",
+            "title": "From Measurements to Modeling",
+            "description": "<p>Meteorological observations are crucial to the application of meteorology. Nothing we do regarding the science can be separated from the observations. Computer models and weather forecasts rely on observations as an essential part of their success. Observations set the stage for how the models start and update them as they run. They are the starting point in any good forecast.</p>",
             "url": "#/videos/measurements",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
@@ -95,13 +95,13 @@
 
                 "id": "principles",
                 "active": true,
-                "title": "Principles of Meteorological Instrumentation and Measurements",
-                "description": "<p>This is a video on why we need supercomputers to help us research weather.</p>",
+                "title": "Instrumentation and Measurements",
+                "description": "<p>Meteorological instruments and observing systems are needed because we want to understand the phenomena we are studying for several reasons. We can use observing systems for ground truth, initialization for a computer model, and to understand anything from road weather to space weather and use the information to respond to the impacts of a particular phenomenon.It is important and necessary that we understand the principles behind instrumentation and measurement because it's the basis of understanding science and of getting to the truth.</p>",
                 "url": "#/videos/principles",
                 "placeholder": {
                     "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
                     "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
-                    "mp4": "/assets/videos/prediction-principles.mp4",
+                    "mp4": "/assets/videos/menu/prediction-principles.mp4",
                     "width": 475,
                     "height": 243
                 }
