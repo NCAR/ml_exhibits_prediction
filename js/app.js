@@ -4,7 +4,6 @@
     "edu.ucar.scied.prediction.controller",
     "edu.ucar.scied.webapp.controller",
     "edu.ucar.scied.webapp.service",
-    "edu.ucar.scied.annyang.service",
     "edu.ucar.scied.menulist.controller",
     "edu.ucar.scied.videos.controller",
     "edu.ucar.scied.footer.service",

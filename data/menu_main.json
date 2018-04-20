@@ -5,7 +5,7 @@
             "active": true,
             "title": "Forecast a HURRICANE",
             "description": "Select an upper-level high and low to see where a hurricane will go",
-            "url": "#/flash/hurricane",
+            "url": "#!/flash/hurricane",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/forecast-a-hurricane.jpg",
                 "mp4": "/assets/videos/menu/forecast-a-hurricane.mp4",
@@ -19,7 +19,7 @@
             "active": true,
             "title": "Create a SNOWSTORM",
             "description": "Drag storm systems to create an upslope storm",
-            "url": "#/flash/snow",
+            "url": "#!/flash/snow",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/create-a-snowstorm.jpg",
                 "mp4": "/assets/videos/menu/create-a-snowstorm.mp4",
@@ -33,7 +33,7 @@
             "active": true,
             "title": "Videos",
             "description": "Watch videos about modeling and computer systems in the atmospheric sciences",
-            "url": "#/videos",
+            "url": "#!/videos",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/katrina.jpg",
                 "mp4": "/assets/videos/menu/katrina.mp4",
@@ -50,7 +50,7 @@
             "active": true,
             "title": "Hurricane Visualization",
             "description": "<p>A hurricane research team at the Earth System Laboratory, led by Wei Wang, computed the evolution of the storm using a complex numerical weather prediction model. Running this mathematical model on the Bluefire supercomputer at the National Center for Atmospheric Research yielded terabytes of data, which AVL then transformed into a striking animation of the 36-hour period when the storm is gaining energy over the warm ocean. Volume-rendered clouds show abundant moisture. Trajectories follow moist air rising into intense \"hot tower\" thunderstorms and trace strong winds around the eye wall; rapidly rising air is yellow, while sinking air is blue. The sun, moon, and stars show the passing of time.</p>",
-            "url": "#/videos/katrina",
+            "url": "#!/videos/katrina",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/katrina.jpg",
                 "thumb": "/assets/images/menu/katrina-thumb.jpg",
@@ -66,7 +66,7 @@
             "active": true,
             "title": "Development of a F3 Tornado",
             "description": "<p>In a typical year, 1,200 tornadoes cause 70 fatalities and 1,500 injuries nationwide. Most of the damage, deaths, and injury are due to a very small percentage of these tornadoes, the so-called “supertwisters” whose winds of more than 200 miles per hour put them at the extreme end of the Fujita Scale of Tornado Intensity (the so-called F4 and F5 tornadoes). On average, there are 12 or 13 of these tornadoes in the United States each year.</p><p>Ideally, forecasters would be able to provide enough warning that people could protect themselves from these killer storms. While they have successfully identified atmospheric conditions that are favorable for supercell formation, accurately predicting which storms will produce tornadoes and at what time is a feat that continues to challenge forecasters. Researchers from the University of Illinois at Urbana-Champaign collaborated with visualization experts at NCSA in an effort to shed light on how the most violent tornadoes form and to create animations that reveal the inner behavior of tornado producing storms.</p>",
-            "url": "#/videos/tornado",
+            "url": "#!/videos/tornado",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/tornado.jpg",
                 "thumb": "/assets/images/menu/tornado-thumb.jpg",
@@ -82,7 +82,7 @@
             "active": true,
             "title": "From Measurements to Modeling",
             "description": "<p>Meteorological observations are crucial to the application of meteorology. Nothing we do regarding the science can be separated from the observations. Computer models and weather forecasts rely on observations as an essential part of their success. Observations set the stage for how the models start and update them as they run. They are the starting point in any good forecast.</p>",
-            "url": "#/videos/measurements",
+            "url": "#!/videos/measurements",
             "placeholder": {
                 "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
                 "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
@@ -97,7 +97,7 @@
                 "active": true,
                 "title": "Instrumentation and Measurements",
                 "description": "<p>Meteorological instruments and observing systems are needed because we want to understand the phenomena we are studying for several reasons. We can use observing systems for ground truth, initialization for a computer model, and to understand anything from road weather to space weather and use the information to respond to the impacts of a particular phenomenon.It is important and necessary that we understand the principles behind instrumentation and measurement because it's the basis of understanding science and of getting to the truth.</p>",
-                "url": "#/videos/principles",
+                "url": "#!/videos/principles",
                 "placeholder": {
                     "image": "/assets/images/menu/posterframes/prediction-measurements.jpg",
                     "thumb": "/assets/images/menu/prediction-measurements-thumb.jpg",
