@@ -43,7 +43,7 @@
     WebApp.setDataSource('data/videos.json');
     Footer.setBackButton(true);
     Footer.setBackButtonText("Videos");
-    Footer.setBackPage("#/videos");
+    Footer.setBackPage("#!/videos");
 
 
 
@@ -58,7 +58,7 @@
     if ($routeParams.menuId) {
       Footer.setBackButton(true);
       Footer.setBackButtonText("Back");
-      Footer.setBackPage('#/' + $routeParams.menuId);
+      Footer.setBackPage('#!/' + $routeParams.menuId);
     } else {
       Footer.setBackButton(false);
     }
