@@ -84,7 +84,7 @@
       .then(processData);
 
     function processData(list) {
-      var menu_data = list["flash"];
+      var menu_data = list.data["flash"];
       $.each(menu_data, function(index, value) {
         if (value.id == $routeParams.contentId) {
           Footer.setPageTitle(value.title);
